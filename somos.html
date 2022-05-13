@@ -8,20 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/estilos.css" rel="stylesheet">
-<!-- script que permite mostrar/ocultar navbar haciendo scroll -->
-<script type="text/javascript">
-  let ubicacionInicial = window.pageYOffset;
-  window.onscroll = function () {
-      let ubicacionPosterior = window.pageYOffset;
-      if (ubicacionInicial >= ubicacionPosterior) {
-          document.getElementById("barraNav").style.top = "0";
-      }
-      else {
-          document.getElementById("barraNav").style.top = "-70px";
-      }
-      ubicacionInicial = ubicacionPosterior
-  }
-</script>
+
 <script>
   
 
@@ -68,6 +55,12 @@
             <li class="nav-item">
               <a class="nav-link enable" href="formulario.html">Formulario</a>
           </li>
+          <li class="nav-item">
+              <a class="nav-link enable" href="Api_Feriados.html">Feriados</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link enable" href="Cuenta_Regresiva.html">Cuenta Regresiva</a>
+          </li>   
         </ul>
         <!--botón buscar-->
         <form class="form-inline mt-2 mt-md-0">
@@ -213,7 +206,7 @@
                     <label for="comentario">Ingrese su comentario:</label><br>
                     <textarea name="responsive-text" rows="5" title="ingrese su comentario"
                      placeholder="Escriba su comentario..." required></textarea>
-                  </div>
+                    </div>
                   <br>
                   <input type="submit" class="btn btn-danger" value="Enviar su solicitud">
                   <input type="reset" class="btn btn-dark" value="Limpiar su solicitud">
@@ -240,8 +233,8 @@
     <div class="col-lg-1">
         <a href="galeria.html" id="linkFooter"><strong>GALERIA</strong></a>
     </div>
-    <div class="col-lg-2">
-      <a href="formulario.html" id="linkFooter"><strong>FORMULARIO</strong></a>
+    <div class="col-lg-1">
+      <a href="Api_Feriados.html" id="linkFooter"><strong>FERIADOS</strong></a>
   </div>
       <div class="col-lg-2">
           <strong>Síguenos en nuestras redes</strong>
@@ -274,10 +267,60 @@
           </div>
           <br>
           <p>&copy; GardenWorld - 2022</p>
+       </div>
+
+            <!-- Inicio Reloj-->
+            <div>
+              <div class="wrapper">
+                  <div class="display">
+                      <div id="time"></div>
+                  </div>
+                  <span></span>
+                  <span></span>
+              </div>
+              <script>
+                 setInterval(()=>{
+                  const time = document.querySelector("#time");
+                  let date = new Date();
+                  let hours = date.getHours();
+                  let minutes = date.getMinutes();
+                  let seconds = date.getSeconds();
+                  let day_night = "AM";
+                  if(hours >12){
+                      day_night = "PM";
+                      hours =hours -12;
+                  }
+                  if(hours <10){
+                      hours = "0" + hours;
+                  }
+                  if(minutes <10){
+                      hours = "0" + hours;
+                  }
+                  if(seconds <10){
+                      seconds = "0" + seconds;
+                  }
+                  time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+                 });
+              </script>
+          </div>
+           <!-- Fin Reloj-->
       </div>
   </div>
 </footer>
-
+<!-- script que permite mostrar/ocultar navbar haciendo scroll -->
+<script type="text/javascript">
+  let ubicacionInicial = window.pageYOffset;
+  window.onscroll = function () {
+      let ubicacionPosterior = window.pageYOffset;
+      if (ubicacionInicial >= ubicacionPosterior) {
+          document.getElementById("barraNav").style.top = "0";
+      }
+      else {
+          document.getElementById("barraNav").style.top = "-70px";
+      }
+      ubicacionInicial = ubicacionPosterior
+  }
+</script>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

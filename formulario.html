@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario</title>
+<link rel="icon" href="img/gardenworld.jpg" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/estilos.css" rel="stylesheet">
+  <!-- script que permite mostrar/ocultar navbar haciendo scroll -->
+<script type="text/javascript">
+    let ubicacionInicial = window.pageYOffset;
+    window.onscroll = function () {
+        let ubicacionPosterior = window.pageYOffset;
+    if (ubicacionInicial >= ubicacionPosterior) {
+        document.getElementById("barraNav").style.top = "0";
+    }
+    else {
+        document.getElementById("barraNav").style.top = "-70px";
+    }
+    ubicacionInicial = ubicacionPosterior
+}
+</script>
+<script>
+
+        function CambiaColor(a)
+                {
+                    a.style.background = "yellow";
+                }
+        
+
+        function CambiarMayusculas()
+                {
+                    var a = document.getElementById('prinombre');
+                    a.value = a.value.toUpperCase();
+                }
+        
+
+
+        
+         $(function() 
+        {
+            $("#mi-formulario").validate({
+              rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: "required",
+                    fono: "required",
+                    password2: {
+                        required: true,
+                        equalTo: "#password"
+                    }   
+                    
+                }, //rules
+            messages: {
+                email: {
+                    required: 'Ingresa tu correo electrónico',
+                    email: 'Formato de correo no válido'
+                },
+                password: {
+                    required: 'Ingresa una contraseña',
+                    minlength: 'Caracteres insuficientes'
+                },
+                fono:{
+                    required: 'Ingrese un número de celular',
+                    minlength: 'Cantidad de digitos insuficiente'
+                },
+                
+                password2: {
+                    required: 'Reingresa la contraseña',
+                    equalTo: 'Las contraseñas ingresadas no coinciden',
+                    minlength: 'Caracteres insuficientes'
+
+                }
+            }//messages
+        }); //$('#mi-formulario').validate
+    }); //function
+
+
+
+</script>
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="home.html" id="logoGarden">
+            <img src="img/gardenworld.jpg" alt="logoGarden" width="60px">Garden World
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link enable" href="somos.html">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="galeria.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="formulario.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Api_Feriados.html">Feriados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Cuenta_Regresiva.html">Cuenta Regresiva</a>
+                </li>   
+                
+            </ul>
+            <!--botón buscar-->
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué producto buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <!--inicio de sesión-->
+            <div>
+                <a href="login.html" id="userGarden">
+                    <img src="img/user-vector-icon.png" alt="userGarden" width="20px">Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Header con imagen -->
+    <header class="bgimg w3-display-container w3-greenscale-min">
+        <div>
+            <img src="img/imagenprincipal.jpg" style="width:100%; height:600px;" class="w3-margin-top">
+        </div>
+        <div class="w3-display-bottomright w3-center w3-padding-large">
+        </div>
+    </header>
+
+       
+
+    <!--Suscribirme-->
+    <div class="row jumbotron" id="qInfo"> 
+        
+        <br>
+        <div class="container">
+        
+            <form  style="background-color:rgb(66, 186, 15) ;text-align:center"    method="post" name="registro" class="col-lg-10 suscripcion">
+                <div class=" mb-4">
+                    <h2 style="color:rgb(4, 252, 99);font-family:'Lucida Sans'; text-align:center;"><strong>Garden World</strong></h2>
+                        <br>
+                        <h1 style="color:rgb(224, 239, 7);font-family:'Lucida Sans';text-align:center;">Formulario de registro</h1>
+            
+                        
+                        
+                        <div class="form-group">
+                            <label for="prinombre">Ingrese su primer nombre: </label><br>
+                            <input type="text" class="form-control" id="prinombre" name="prinombre " 
+                            placeholder="Digite su primer nombre" onchange="CambiarMayusculas()" onfocus="CambiaColor(this)"required>
+                        </div>
+                        
+                        <div class="form-group" >
+                            <label for="segnombre" >Ingrese su segundo nombre: </label><br>
+                            <input type="text" class="form-control" id="segnombre" name="segnombre " 
+                            placeholder="Digite su segundo nombre" onfocus="CambiaColor(this)" required>
+                        </div>
+                        
+                        <div class="form-group" >
+                            <label for="appaterno">Ingrese su apellido paterno: </label><br>
+                            <input type="text" class="form-control" id="appaterno" name="appaterno" 
+                            placeholder="Digite su apellido paterno" onfocus="CambiaColor(this)" required>
+                        </div>
+                        
+                        <div class="form-group" >
+                            <label for="apmaterno">Ingrese su apellido materno: </label><br>
+                            <input type="text" class="form-control" id="apmaterno" name="apmaterno" 
+                            placeholder="Digite su apellido materno" onfocus="CambiaColor(this)" required>
+                        </div>
+                        
+                        <div class="form-group" >
+                            <label for="Telefono">Ingrese su Teléfono</label><br>
+                            <input class="form-control" type="number" name="Telefono" minlength="9"  id="Telefono"
+                            placeholder="Ingrese su Telefono" onfocus="CambiaColor(this)" required>
+                        </div>
+
+                        <div class="form-group" >
+                            <label for="correo">Ingrese su email: </label><br>
+                            <input type="email" class="form-control" id="correo" name="correo" 
+                            placeholder="Digite su correo" onfocus="CambiaColor(this)" required>
+                        </div>
+                       
+                        <div >
+                            <label >Ingrese su password: </label><br>
+                            <input type="password" class="form-control" id="password" name="password" minlength="8" pattern="[a-z]{1,100}" title="[a-z]{1,15}"
+                            placeholder="Digite su password" onfocus="CambiaColor(this)" required>
+                        </div>
+                       
+                        <div class="form-group" >
+                            <label >Vuelva a ingresar su password: </label><br>
+                            <input type="password" class="form-control"  name="password2" 
+                            placeholder="Digite su password" onfocus="CambiaColor(this)" required>
+                        </div>
+                       
+                        <div class="form-group" >
+                            <label for="direccion">Ingrese su dirección: </label><br>
+                            <input type="direccion" class="form-control" id="direccion" name="direccion"
+                            placeholder="Digite su dirección" onfocus="CambiaColor(this)" required>
+                        </div>
+                    
+                        <label for="Comuna" >Ingrese su Comuna: </label>
+                        <select name="Comuna" onfocus="CambiaColor(this)">
+                        <option value="1">Maipu</option>
+                        <option value="2">Santiago</option>
+                        <option value="4">Conchalí</option>
+                        <option value="5">Huechuraba</option>
+                        <option value="6">Independencia</option>
+                        <option value="7">Quilicura</option>
+                        <option value="8">Recoleta</option>
+                        <option value="9">Renca</option>
+                        <option value="10">Las Condes</option>
+                        <option value="11">Cerrillos</option>
+                        </select><br><br>
+
+                        <label for="genero">Seleccione su genero: </label><br>
+                        <label for="hombre">Hombre:</label>
+                        <input type="radio" name="btn1" required><br>
+                        <label for="Mujer">Mujer:</label>
+                        <input type="radio" name="btn1" required><br>
+                        <label for="otrogenero">Otro Género:</label>
+                        <input type="radio" name="btn1" required><br>
+                    
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-danger" value="Enviar su registro">
+                        <input type="reset" class="btn btn-dark" value="Limpiar su registro">
+                        
+                            
+                    </div>
+                </div>
+            </form>
+
+            
+                
+        
+        </div>
+        <!-- pie de página-->
+<footer>
+<div class="row col-12">
+    <div class="col-lg-2">
+        <img src="img/gardenworld.jpg" alt="gardenworldStop" width="60px">
+    </div>
+    <div class="col-lg-1">
+        <a href="home.html" id="linkFooter"><strong>INICIO</strong></a>
+    </div>
+    <div class="col-lg-1">
+        <a href="somos.html" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+    </div>
+    <div class="col-lg-1">
+        <a href="galeria.html" id="linkFooter"><strong>GALERIA</strong></a>
+    </div>
+    <div class="col-lg-1">
+        <a href="Api_Feriados.html" id="linkFooter"><strong>FERIADOS</strong></a>
+    </div>
+    <div class="col-lg-2">
+        <strong>Síguenos en nuestras redes</strong>
+        <br><br>
+        <div class="row">
+            <img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
+                style=" margin-left: 15px;">
+            <img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+            <img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+        </div>
+    </div>
+
+            <div class="col-lg-3">
+                <strong>Contacto</strong>
+                <br><br>
+                <div class="row">
+                    <img src="img/location.png" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>Cerro Primo de Rivera 666, Maipú</p>
+                </div>
+                <div class="row">
+                    <img src="img/fono.png" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>883610369</p>
+                </div>
+                <div class="row">
+                    <img src="img/email.png" alt="" width="20px" height="20px"
+                        style="margin-right: 10px; margin-left: 15px;">
+                    <p>garden@world.cl</p>
+                </div>
+                <br>
+                <p>&copy; GardenWorld - 2022</p>
+            </div>
+              <!-- Inicio Reloj-->
+              <div>
+                <div class="wrapper">
+                    <div class="display">
+                        <div id="time"></div>
+                    </div>
+                    <span></span>
+                    <span></span>
+                </div>
+                <script>
+                   setInterval(()=>{
+                    const time = document.querySelector("#time");
+                    let date = new Date();
+                    let hours = date.getHours();
+                    let minutes = date.getMinutes();
+                    let seconds = date.getSeconds();
+                    let day_night = "AM";
+                    if(hours >12){
+                        day_night = "PM";
+                        hours =hours -12;
+                    }
+                    if(hours <10){
+                        hours = "0" + hours;
+                    }
+                    if(minutes <10){
+                        hours = "0" + hours;
+                    }
+                    if(seconds <10){
+                        seconds = "0" + seconds;
+                    }
+                    time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+                   });
+                </script>
+            </div>
+             <!-- Fin Reloj-->
+
+        </div>
+    </footer>
+      
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/validacion.js"></script>
+</html>

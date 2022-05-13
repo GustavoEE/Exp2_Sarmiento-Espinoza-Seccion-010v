@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quienes somos</title>
+<link rel="icon" href="img/gardenworld.jpg" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/estilos.css" rel="stylesheet">
+<!-- script que permite mostrar/ocultar navbar haciendo scroll -->
+<script type="text/javascript">
+  let ubicacionInicial = window.pageYOffset;
+  window.onscroll = function () {
+      let ubicacionPosterior = window.pageYOffset;
+      if (ubicacionInicial >= ubicacionPosterior) {
+          document.getElementById("barraNav").style.top = "0";
+      }
+      else {
+          document.getElementById("barraNav").style.top = "-70px";
+      }
+      ubicacionInicial = ubicacionPosterior
+  }
+</script>
+<script>
+  
+
+
+  function CambiarMayusculas()
+  {
+      var a = document.getElementById('nombrecom');
+      a.value = a.value.toUpperCase();
+  }
+
+
+  function CambiaColor(a)
+  {
+      a.style.background = "yellow";
+  }
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+    <a href="home.html" id="logoGarden">
+        <img src="img/gardenworld.jpg" alt="logoGarden" width="60px">Garden World
+    </a>
+    <!-- botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link enable" href="somos.html">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link enable" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link enable" href="formulario.html">Formulario</a>
+          </li>
+        </ul>
+        <!--botón buscar-->
+        <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="¿Qué producto buscas?" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+        </form>
+        <!--inicio de sesión-->
+        <div>
+            <a href="login.html" id="userGarden">
+                <img src="img/user-vector-icon.png" alt="userGarden" width="20px">Iniciar sesión
+            </a>
+        </div>
+        <div>
+          <a href="formulario.html" id="userGarden">
+              <img src="img/user-vector-icon-verde.png" alt="userGarden" width="20px">Registrarse
+          </a>
+      </div>
+    </div>
+</nav>
+
+<!-- Header con imagen -->
+<header class="bgimg w3-display-container w3-greenscale-min">
+  <div>
+    <img src="img/imagenprincipal.jpg" style="width:100%; height:600px;" class="w3-margin-top">
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+  </div>
+</header>
+
+<!-- agregar color de fondo -->
+
+  <div class="row jumbotron" id="qPaisajes">
+<!-- Container con el contenido-->
+    <div class="row jumbotron "  style="justify-content: center; background-color: rgb(17, 176, 17);">
+        <div class="w3-container" id="about">
+          <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ACERCA DE NOSOTROS</span></h5>
+            <p>El objetivo de este sitio web es el ayudar a la comunidad de vecinos a aumentar sus ventas,
+              y así, poder ayudar de forma más eficiente a la fundación, sin fines de lucro, a la vez que se
+              ayuda al medio ambiente, debido a que, mientras se aumenta el nivel de plantas en las
+              zonas urbanas, se mejora la calidad del aire, estas absorben parte del agua que cae de las
+              lluvias y ayudan a la vida silvestre</p>
+            <img src="img/imagen2.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+            <BR>
+          </div>
+        </div>
+        <div class="w3-container" id="about">
+          <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">NUESTRA VISIÓN</span></h5>
+            <p>Realizar venta de plantas nativas y acordes al clima de la región, para asi ayudar a la
+              diversidad de forma responsable, además haremos generamos un ambiente de aprendizaje
+              y cercanía con el cliente, lo cual se complementa con los talleres de cuidado de plantas que
+              realizará la vecindad.</p>
+            <img src="img/imagen2.1 (2).jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+
+            <BR>
+          </div>
+        </div>
+        <div class="w3-container" id="about">
+          <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">NUESTRA MISIÓN</span></h5>
+            <p>Queremos ayudar a la vecindad a entender y cuidar el valor de la naturaleza, acercando la
+              naturaleza a sus vidas.</p>
+            <img src="img/imagen2.3 (2).jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+          </div>
+        </div>
+
+        <BR>
+        <div class="w3-container">
+          <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">VIDEO PROMOCIONAL</span></h5>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/A6rRn9jN-bw" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <!--video automático-->
+            <video  autoplay muted style="width:100%;max-width:1000px">
+              <source src="img/videojardin.mp4" type="video/mp4" style="width:100%;max-width:1000px">
+            </video>
+          </div>
+        </div>
+  </div>
+
+</div>
+  <!--Suscribirme-->
+<div class="row jumbotron" id="qInfo">
+  
+  <br>
+           
+  <div class="container">
+  
+      <form  style="background-color:rgb(71, 18, 194); text-align: center; "    
+        method="post" name="registro" class="col-lg-10 suscripcion">
+          <div class="w3-container">
+              <h2 style="color:rgb(203, 29, 19);font-family:'Lucida Sans'; text-align:center; "><strong>Garden World</strong></h2>
+                  <br>
+                  <h1 style="color:rgb(224, 239, 7); font-size:50px; font-family:'Lucida Sans'; text-align:center;" >Formulario de contacto</h1>
+                  
+                  <br>
+                  
+                
+                  <div class="form-group">
+                      <label for="nombrecom">Ingrese nombre completo: </label><br>
+                      <input type="text" class="form-control" id="nombrecom" name="nombrecom" 
+                      placeholder="Escriba su nombre completo" onchange="CambiarMayusculas()" onfocus="CambiaColor(this)"required>
+                  </div>
+            
+                  
+                  <div class="form-group">
+                      <label for="Telefono">Digite su Teléfono</label><br>
+                      <input class="form-control" type="number" name="Telefono" id="Telefono" title="Ingrese solo números"
+                      placeholder="Ingrese su Teléfono" onfocus="CambiaColor(this)" minlength="9" required>
+                  </div>
+
+                  <div class="form-group" >
+                      <label for="correo">Ingrese su email: </label><br>
+                      <input type="email" class="form-control" id="correo" name="correo" 
+                      placeholder="Digite su correo" onfocus="CambiaColor(this)" required>
+                  </div>
+                  <div class="form-group" >
+                    <label for="direccion">Ingrese su dirección: </label><br>
+                    <input type="text" class="form-control" id="direccion" name="dirección" 
+                    placeholder="Escriba su dirección" onfocus="CambiaColor(this)" required>
+                </div>
+                  
+                <div class="w3-display-container">
+                  <label for="Comuna" >Ingrese su Comuna: </label>
+                  <select name="Comuna" onfocus="CambiaColor(this)">
+                  <option value="1">Maipu</option>
+                  <option value="2">Santiago</option>
+                  <option value="4">Conchalí</option>
+                  <option value="5">Huechuraba</option>
+                  <option value="6">Independencia</option>
+                  <option value="7">Quilicura</option>
+                  <option value="8">Recoleta</option>
+                  <option value="9">Renca</option>
+                  <option value="10">Las Condes</option>
+                  <option value="11">Cerrillos</option>
+                  </select>
+                </div>
+                <br>
+                  <div class="container">
+                    <label for="comentario">Ingrese su comentario:</label><br>
+                    <textarea name="responsive-text" rows="5" title="ingrese su comentario"
+                     placeholder="Escriba su comentario..." required></textarea>
+                  </div>
+                  <br>
+                  <input type="submit" class="btn btn-danger" value="Enviar su solicitud">
+                  <input type="reset" class="btn btn-dark" value="Limpiar su solicitud">
+                  
+                
+              </div>
+
+
+          </form>
+  </div>
+</div>
+<!-- pie de página-->
+<footer>
+  <div class="row col-12">
+      <div class="col-lg-2">
+          <img src="img/gardenworld.jpg" alt="gardenworldStop" width="60px">
+      </div>
+      <div class="col-lg-1">
+        <a href="home.html" id="linkFooter"><strong>INICIO</strong></a>
+    </div>
+    <div class="col-lg-1">
+        <a href="somos.html" id="linkFooter"><strong>QUIENES SOMOS</strong></a>
+    </div>
+    <div class="col-lg-1">
+        <a href="galeria.html" id="linkFooter"><strong>GALERIA</strong></a>
+    </div>
+    <div class="col-lg-2">
+      <a href="formulario.html" id="linkFooter"><strong>FORMULARIO</strong></a>
+  </div>
+      <div class="col-lg-2">
+          <strong>Síguenos en nuestras redes</strong>
+          <br><br>
+          <div class="row">
+              <img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
+                  style=" margin-left: 15px;">
+              <img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+              <img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+          </div>
+      </div>
+
+      <div class="col-lg-3">
+          <strong>Contacto</strong>
+          <br><br>
+          <div class="row">
+              <img src="img/location.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>Cerro Primo de Rivera 666, Maipú</p>
+          </div>
+          <div class="row">
+              <img src="img/fono.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>883610369</p>
+          </div>
+          <div class="row">
+              <img src="img/email.png" alt="" width="20px" height="20px"
+                  style="margin-right: 10px; margin-left: 15px;">
+              <p>garden@world.cl</p>
+          </div>
+          <br>
+          <p>&copy; GardenWorld - 2022</p>
+      </div>
+  </div>
+</footer>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/validacion.js"></script>
+</html>

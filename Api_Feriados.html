@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feriados</title>
+
+    <link rel="icon" href="img/gardenworld.jpg" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+<!-- // w3school, boostrar 4, start, cdn-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library, lee el jquery, pero no el jaison -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script> -->
+<!-- asi que se elimina la de arriba y se va a jquery star en 3 school y despues se saca la que dice cdn-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script>
+      function Cambiar()
+      {
+          var a = prompt('Escribe tú nombre: ');
+          document.getElementById('nombre').innerHTML = a;
+      }
+
+      function MostrarFecha() 
+        {   document.getElementById('demo').innerHTML = Date();
+         
+        }
+    function CambiaColor(a)
+        {
+            a.style.background = "orange";
+        }
+  </script>
+
+
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#enviar").click(function(){
+
+            $.get("https://apis.digital.gob.cl/fl/feriados/2022",function(data)
+            {
+                $.each(data,function(i,item)
+                {
+                    $("#categorias").append("<tr><td>"+ item.nombre +
+                            "</td><td>"+item.fecha +
+                            "</td><td>"+item.tipo+"</td></tr>");
+                });
+            });
+        });
+    });
+</script>
+
+<link rel="icon" href="img/gardenworld.jpg" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="home.html" id="logoGarden">
+            <img src="img/gardenworld.jpg" alt="logoGarden" width="60px">Garden World
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link enable" href="somos.html">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="galeria.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="formulario.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Api_Feriados.html">Feriados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Cuenta_Regresiva.html">Cuenta Regresiva</a>
+                </li>   
+            </ul>
+            <!--botón buscar-->
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué producto buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <!--inicio de sesión-->
+            <div>
+                <a href="login.html" id="userGarden">
+                    <img src="img/user-vector-icon.png" alt="userGarden" width="20px">Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h2 onmouseover="style.color = 'orange'" onmouseout="style.color= 'black'">
+            <strong>¡Información!</strong>
+        </h2>
+        <hr>
+        <h3 id="nombre" onclick="Cambiar()">Click Aqui</h3>
+        <hr>
+        <h3>¿Quieres saber la fecha de hoy?</h3>
+        <input type="button" class="btn btn-primary" onclick="MostrarFecha()" value="Mostrar">
+        <p id="demo"></p>
+        <hr>
+    </div>
+
+    <div class="container">
+        <h1>Feriados Nacionales 2022 </h1> <br>
+        <button id="enviar">Ver Feriados </button>
+        <br>
+        <table class="table" id="categorias">
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    </tr>
+                </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

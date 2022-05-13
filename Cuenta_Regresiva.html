@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/gardenworld.jpg" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+
+
+
+    
+    
+
+   <!-- script que permite mostrar/ocultar navbar haciendo scroll -->
+   <script type="text/javascript">
+    let ubicacionInicial = window.pageYOffset;
+    window.onscroll = function () {
+        let ubicacionPosterior = window.pageYOffset;
+        if (ubicacionInicial >= ubicacionPosterior) {
+            document.getElementById("barraNav").style.top = "0";
+        }
+        else {
+            document.getElementById("barraNav").style.top = "-70px";
+        }
+        ubicacionInicial = ubicacionPosterior
+    }
+</script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="home.html" id="logoGarden">
+            <img src="img/gardenworld.jpg" alt="logoGarden" width="60px">Garden World
+        </a>
+        <!-- botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link enable" href="somos.html">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="galeria.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="formulario.html">Formulario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Api_Feriados.html">Feriados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="Cuenta_Regresiva.html">Cuenta Regresiva</a>
+                </li>   
+            </ul>
+            <!--botón buscar-->
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="¿Qué producto buscas?" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</button>
+            </form>
+            <!--inicio de sesión-->
+            <div>
+                <a href="login.html" id="userGarden">
+                    <img src="img/user-vector-icon.png" alt="userGarden" width="20px">Iniciar sesión
+                </a>
+            </div>
+            <br>
+            <div>
+                <a href="formulario.html" id="userGarden">
+                    <img src="img/user-vector-icon-verde.png" alt="userGarden" width="20px">Registrarse
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div>
+        <section class="container">
+            <h1>¡Dias para HALLOWEEN!</h1>
+            <div class="countdown">
+                <div>
+                    <p id="days">172</p>
+                    <span>Dias</span>
+                </div>
+            <div>
+                <p id="hours">15</p>
+                <span>Horas</span>
+            </div>
+            <div>
+                <p id="minutes">25</p>
+                <span>Minutos</span>
+            </div>
+            <div>
+                <p id="seconds">45</p>
+                <span>Segundos</span>
+            </div>
+            </div>
+        </section>
+        <section class="final-sms"><h2>¡FELIZ HALLOWEEN 🎃👻! </h2></section>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>

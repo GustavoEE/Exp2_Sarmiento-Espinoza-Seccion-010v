@@ -1,0 +1,267 @@
+/* Show it's not fixed to the top */
+body {
+  /*min-height: 75rem;*/
+  /*background-image: url("https://assets.awwwards.com/awards/images/2015/04/pattern.jpg");*/
+  background-color: #97b0ca;
+  padding-top: 86px;
+  
+} 
+
+#logoGarden{
+  color: #8aa725;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 16px;
+  padding-top: 3px;
+}
+
+#logoGarden img{
+  margin-right: 7px;
+  margin-bottom: 3px;
+}
+
+#logoGarden:hover{
+  filter: invert(42%) sepia(99%) saturate(2844%) hue-rotate(341deg) brightness(95%) contrast(91%);
+}
+
+.navbar{
+  -webkit-box-shadow:0px 2px 2px #99ca12;
+  -moz-box-shadow:0px 2px 2px #dddddd;
+  box-shadow:0px 2px 2px #dddddd;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  transition: 0.3s;
+  width: 100%;
+  top: 0;
+}
+
+#carousel1{
+  position: relative;
+  z-index: 0;
+}
+
+
+#userGarden{
+  color: #3C92D8;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+#userGarden:hover{
+  filter: invert(42%) sepia(99%) saturate(2844%) hue-rotate(341deg) brightness(95%) contrast(91%);
+}
+
+#userGarden img{
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+#btnBuscar{
+  border-color: #5237e9; 
+  color: #0a7029;
+  margin-right: 20px;
+  margin-left: -5px;
+}
+
+#btnBuscar:hover{
+  background-color: #2a8043; 
+  color: #ffffff;
+}
+
+#btnRegistrarse{
+  border-color: #007BFF; 
+  color: #007BFF;
+}
+
+#btnRegistrarse:hover{
+  background-color: #0069D9; 
+  color: #ffffff;
+}
+
+#titLogo{
+  color: #3C92D8; 
+  margin-left: 7px;
+}
+
+#titLogo:hover{
+  filter: invert(42%) sepia(99%) saturate(2844%) hue-rotate(341deg) brightness(95%) contrast(91%);
+}
+
+#qInfo{
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0;
+  background-color: #d1cf3d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #15469c;
+}
+
+#qInfo h1{
+  color: #81ac1c;
+}
+
+#qInfo h2{
+  color: #191cc4;
+}
+
+#qPaisajes{
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0;
+  background-color: #32a39a;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #121614;
+}
+
+#qPaisajes h1{
+  color: #e9eaf3;
+}
+
+#qPaisajes h2{
+  color: #f8f7f1;
+}
+
+
+.card{
+  -webkit-box-shadow: 0px 0px 4px #c5c5c5;
+  -moz-box-shadow: 0px 0px 4px #c5c5c5;
+  box-shadow: 0px 0px 4px #c5c5c5;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 5px;
+  color: #596272;
+}
+
+.card img{
+  width: 180px;
+}
+
+div>h4{
+  color: #1b171b;
+} 
+
+.suscripcion{
+  background-color: #afa018;
+  color: rgb(248, 241, 246);
+  padding-bottom: 5px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 7px #c5c5c5;
+  -moz-box-shadow: 0px 0px 7px #c5c5c5;
+  box-shadow: 0px 0px 7px #818181;
+  align-items: center;
+  font-size: 18px;
+}
+
+#suscripcion h2{
+  color: white;
+}
+
+#btnsuscripcion{
+  background-color: #e94f37; 
+  border-color: #e94f37;
+}
+
+#btnsuscripcion:hover{
+  background-color: #1f8112; 
+  border-color: #e23c22;
+}
+
+footer{
+  padding: 20px;
+  color: #0b85d6;
+  background-color: #1e4ba0;
+  height: 280px;
+  margin-top: 20px;
+}
+
+footer div p{
+  font-size: 12px;
+  color: #bbdf1a;
+  padding-top: 5px;
+  line-height: 10px;
+}
+
+#linkFooter{
+  color: #3bbd6d;
+  text-decoration: none;
+}
+
+@media (max-width:991px){
+  header label{
+      display: block;
+  }
+  footer{
+    height: 500px;
+  }
+  .carousel-caption{
+    color: transparent;
+  }
+}   
+
+
+
+/* reloj*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  height: 20px;
+  width: 20px;
+  cursor: default;
+  background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+  border-radius: 10px;
+  animation: animate 1.5s linear infinite;
+}
+.wrapper .display,
+.wrapper .span{
+  position: absolute;
+  /* opacity:0; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.wrapper .display{
+  z-index: 999;
+  background: #1b1b1b;
+  height: 25px;
+  width: 145PX;
+  border-radius: 6px;
+  text-align: center;
+}
+.wrapper .display #time{
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+ /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  animation: animate 1.5s linear infinite;    
+}
+@keyframes animate {
+  100%{
+  filter: hue-rotate(360deg);
+  }
+}
+.wrapper span{
+  height: 00%;
+  width: 100%;
+  background: inherit;
+  border-radius: 10px;
+}
+.wrapper span:first-child{
+  filter: blur(10px);
+}
+.wrapper span:last-child{
+  filter: blur(20px);
+}

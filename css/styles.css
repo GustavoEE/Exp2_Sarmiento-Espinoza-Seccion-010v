@@ -1,0 +1,12 @@
+.carousel {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    
+}
+.carousel-item img{
+    width: auto;
+    max-height: 325px;
+    margin: auto; 
+    display: block;
+}
